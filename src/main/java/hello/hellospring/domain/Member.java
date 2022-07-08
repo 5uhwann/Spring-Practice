@@ -1,7 +1,11 @@
 package hello.hellospring.domain;
 
+import javax.persistence.*;
+
+@Entity
 public class Member {
 
+    @Id@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;  //고객이 정한 ID가 아닌 데이터 구분을 위한 시스템을 위한 id
     private String name; // 고객이 회원가입 시 적는 이름
 
